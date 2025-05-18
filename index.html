@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JonesDashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+<body>
+  <header>
+    <h1>JonesDashboard</h1>
+    <p>Monitoring red and green zones in Northern Thailand</p>
+  </header>
+
+  <div class="toggle-buttons">
+    <button id="redBtn" class="active">Red Zone - Wildfires</button>
+    <button id="greenBtn">Green Zone - Forest</button>
+  </div>
+
+  <div class="alert-box" id="alertBox">
+    <button class="alert-toggle-btn" onclick="toggleAlert()">Show Alert</button>
+    <div class="alert-content hidden" id="alertContent"></div>
+  </div>
+
+  <div class="map-section">
+    <h2>Risk Map</h2>
+    <div id="map"></div>
+  </div>
+
+  <div class="info-section">
+    <h2>Province Data</h2>
+    <div class="card-container" id="provinceData">
+      <!-- ข้อมูลจังหวัดจะแสดงที่นี่ -->
+    </div>
+  </div>
+
+  <div class="charts-section">
+    <h2>Trend Graphs</h2>
+    <div class="chart-row">
+      <canvas id="temperatureChart"></canvas>
+      <canvas id="humidityChart"></canvas>
+      <canvas id="hotspotChart"></canvas>
+    </div>
+  </div>
+
+  <div class="green-zone">
+    <h2>Green Zone</h2>
+    <p>ข้อมูลและรายละเอียดของพื้นที่สีเขียว</p>
+    <h2 style="color: #2d6514;">🌲 Forest Conservation Advisory – Phayao (Dok Khamtai District)</h2>
+  
+  <p><strong>Great news!</strong><br>
+  The forest in <strong>Dok Khamtai District, Phayao Province</strong>, is currently in <strong>excellent condition</strong>, boasting rich biodiversity and lush, thriving ecosystems.</p>
+
+  <p><strong>✅ Forest Integrity Level: A – Excellent</strong><br>
+  This signifies a high level of ecological health, minimal human disturbance, and a strong presence of native flora and fauna.</p>
+
+  <h3 style="color: #2d6514;">🔔 What You Should Do:</h3>
+  <ul>
+    <li>Respect wildlife – Avoid disturbing animals and observe them from a distance.</li>
+    <li>Stay on designated trails – Prevent soil erosion and protect delicate plant life.</li>
+    <li>Do not litter – Carry your trash out with you and dispose of it responsibly.</li>
+    <li>Avoid starting fires – Even in healthy forests, fire risks can still exist.</li>
+    <li>Educate others – Share knowledge about the importance of preserving pristine forests.</li>
+  </ul>
+
+  <h3 style="color: #2d6514;">🌳 Why It Matters:</h3>
+  <ul>
+    <li>Carbon capture and climate regulation</li>
+    <li>Clean air and water</li>
+    <li>Supporting biodiversity</li>
+    <li>Sustaining local communities</li>
+  </ul>
+
+  <p style="font-weight: bold;">Let’s work together to protect this natural treasure for future generations. 🌎💚</p>
+    
+  </div>
+  
+  <div class="red-zone">
+    <h2>Red Zone</h2>
+    <p>ข้อมูลและรายละเอียดของพื้นที่สีแดง</p>
+    <h2>🔥 Wildfire Risk Alert: High in Long District, Phrae Province</h2>
+    <p>Due to current weather and environmental conditions, the risk of wildfire has significantly increased in <strong>Long District, Phrae Province</strong>.</p>
+    <p>Please take the following precautions to protect yourself and your community:</p>
+    <ul>
+      <li><strong>Avoid outdoor burning</strong> of any kind, including agricultural waste or trash.</li>
+      <li><strong>Stay alert</strong> for signs of smoke or fire in nearby forest areas.</li>
+      <li><strong>Report any signs of wildfire immediately</strong> to local authorities or call the national emergency hotline (e.g., 191).</li>
+      <li><strong>Protect your health</strong> – If smoke is present, stay indoors with windows and doors closed.</li>
+      <li><strong>Prepare an emergency kit</strong> with essentials in case evacuation becomes necessary.</li>
+      <li><strong>Stay updated</strong> through local news, weather apps, or official announcements from authorities.</li>
+    </ul>
+    <p><strong>Together, we can reduce the risk and impact of wildfires in our community.</strong></p>
+    <p><em>Stay safe.</em></p>
+  </div>
+  
+
+  <footer>
+    <p>Forest Monitoring System © 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
