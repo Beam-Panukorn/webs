@@ -156,9 +156,9 @@ function updateAlert(zone) {
         alertMsg += `<p>⚠️ <strong>Alert:</strong> ${prov.name} has high fire risk (${prov.red.riskLevel}) 🔥</p>`;
       }
     });
-    alertContent.innerHTML = alertMsg || "<p>✅ No alerts.</p>";
+    alertContent.innerHTML = alertMsg || "<p>⚠️ No Alert.</p>";
   } else {
-    alertContent.innerHTML = "<p>🟢 No alerts in Green Zone.</p>";
+    alertContent.innerHTML = "<p>⚠️ Alert: Phrae Low abundance is concerning.</p>";
   }
 }
 
